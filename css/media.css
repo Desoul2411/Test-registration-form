@@ -1,0 +1,289 @@
+
+
+
+
+
+
+
+@media (max-width: 655px) {
+
+	.form-wrapper {
+		flex-direction: column;
+		height: auto;
+	}
+
+	.form_title  {
+		position: static;
+		transform: none;
+		bottom: 0;
+		left: 0;
+		padding: 15px 0;
+		text-align: center;
+	}
+
+	.form-content {
+		padding: 25px 15px;
+	}
+
+	.password_row {
+		margin-bottom: 20px;
+	}
+}
+
+
+
+@media (max-width: 510px) {
+
+	.form-wrapper  {
+		height: 100%;
+		width: 85%;
+		position: static;
+		transform: none;
+	}
+
+	form {
+		
+		background-size: 70%;
+	}
+
+	.form-content {
+		margin: auto;
+		text-align: center;
+		flex-basis: 85%;
+		padding-right: 0px;
+		padding-left: 0px;
+
+	}
+
+
+	.input-column-wrapper {
+		flex-direction: column;
+		align-content: center;
+
+	}
+
+	.row .date_select {
+		flex-wrap: nowrap;
+	}
+
+
+	.name_input , .nationality_select , select[name=year], .password_input {
+		margin-right: 0px;
+	}
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+
+
+	input {
+		width: 100%;	
+	}
+
+	select[name="nationality"] {
+		max-width: 150px;
+	}
+
+	div.date_select {
+		width: 100%;
+	}
+
+
+	/*custom arrow for select*/
+	label.nationality::before {
+		right: -37px;
+	}
+
+	label.nationality::after {
+		right: -41px;
+	}
+
+
+	/*center validation messages*/
+	.lastname_validation, .name_validation, .nationality_validation , .email_validation, .date_validation, .unacceptable_length , .password_validation,.confirm_password_validation {
+		left: 50%;
+		-moz-transform: translateX(-50%);
+	   	-webkit-transform: translateX(-50%);
+	   	-ms-transform: translateX(-50%);
+	   	-o-transform: translateX(-50%);
+	   	transform: translateX(-50%);
+	}
+
+
+
+	select[name="day"] {
+		max-width: 23%;
+	}
+
+	select[name="month"] {
+		max-width: 40%;
+	}
+
+	select[name="year"] {
+		max-width: 23%;
+	}
+	
+	select.date:not(:last-child) {
+		margin-right: 5%;
+	}
+
+
+
+	/*custom select arrow*/
+	label.month {
+		left: 65px;
+	}
+
+	label.month::before {
+		right: -22px; 
+	}
+
+	label.month::after {
+		right: -26px; 
+	}
+
+
+	label.year {
+		left: 55px;
+	}
+
+	label.year::before {
+		right: -5px; 
+	}
+
+	label.year::after {
+		right: -9px; 
+	}
+
+	.radio_buttons {
+		justify-content: space-between;
+	}
+
+	input[type=radio] {
+		margin-right: 5px;	
+	}
+
+	.form-content-bottom {
+		flex-direction: column;
+	}
+
+	.submit_button {
+		order: 1;
+		margin-bottom: 10px;
+	}
+
+	.login {
+		order: 2;
+	}
+
+
+	.radio_title {
+   		margin-right: 0px;
+	}
+
+	
+	.radio_buttons {
+		justify-content: space-around;
+	}
+
+
+	input.password {
+
+		margin-bottom: 25px;
+	}
+	
+}
+
+
+
+@media (max-width: 425px) {
+
+	input, select,.radio_title {
+		font-size: 13px;
+	}
+
+	select.date:not(:last-child) {
+		margin-right: 6.7%;
+	}
+
+	.form-content-subtitle {
+		font-size: 13px;
+	}
+
+	input, select {
+		font-size: 13px;
+	}
+}
+
+
+
+
+
+@media (max-width: 375px) {
+
+	select.date:not(:last-child) {
+		margin-right: 5%;
+	}
+	/*custom arrow for select*/
+	label.month::before {
+		right: -25px;
+	}
+
+	label.month::after {
+		right: -29px;
+	}
+
+	
+	label.year::before {
+		right: -1px;
+	}
+
+	label.year::after {
+		right: -5px;
+	}
+}
+
+
+
+
+@media (max-width: 355px) {
+
+	select.date:not(:last-child) {
+		margin-right: 3%;
+	}
+}
+
+
+
+
+
+
+@media (max-width: 320px) {
+
+	select[name="day"] {
+		max-width: 20%;
+	}
+
+	select[name="month"] {
+		max-width: 43%;
+	}
+
+	select[name="year"] {
+		max-width: 23%;
+	}
+
+	/*custom arrow for select*/
+	label.year::before {
+		right: 6px;
+	}
+
+	label.year::after {
+		right: 2px;
+	}
+
+
+}

@@ -1,0 +1,712 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+
+body {
+	height: 100%;
+}
+
+
+
+
+.form-wrapper {
+	display: flex;
+	height: 480px;
+	max-width: 665px;
+	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	border: 1px solid black;
+}
+
+
+
+
+form {
+	display: flex;
+	background-image: url('../img/Shape_animated.svg') ;
+    background-repeat: no-repeat;
+	background-position:bottom right;
+}
+
+.form-title-column {
+	background: #5A61ED;
+	flex: 0 1 20.63%;
+	min-width: 115px;
+}
+
+
+.form_title {
+	position: absolute;
+	bottom: 70px;
+	left: -10px;
+	font-family: 'PT Sans', sans-serif;
+	color: #FFFFFF;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 49px;
+	line-height: 63px;
+	letter-spacing: 0.5px;
+	transform: rotate(-90deg);
+}
+
+
+
+.form-content {
+	flex: 0 1 79.37%;
+	padding: 38.5px  22px 32.5px 20px;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;	
+}
+
+
+.form-content-title {
+	font-family: 'Work Sans', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 26px;
+	letter-spacing: -0.46px;
+	color: #111111;
+}
+
+.form-content-subtitle {
+	font-family: 'Work Sans', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 16px;
+	color: #111111;
+
+}
+
+
+.input-column-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+
+}
+
+.row {
+	display: flex;
+}
+
+
+
+
+/*margin between rows*/
+.name_input , .nationality_select , select[name=year], .password_input {
+	margin-right: 15.1px;
+}
+
+
+
+
+input, select {
+	width: 234.5px;
+	height: 29px;
+	outline: 0;
+	border:none;
+	border-bottom: 0.7px solid #F2F2F2;
+	padding: 5px 0;
+	font-family: 'Work Sans', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	color: #111111;
+	margin-bottom: 16px;
+	background-color: transparent;
+}
+
+ /*disable default select arrows*/
+select {    
+	appearance: none; 
+	-webkit-appearance: none;
+}
+
+
+
+
+
+
+/*Validate message on empty inputs value*/
+.empty_field_error:after {
+	position: absolute;
+    content: "Please, fill out this field!"; 
+    display: block;
+    top: 47px;
+    height: 10px;
+    color: red; 
+    font-size: 11px; 
+    padding: 2px;  
+}
+
+
+
+
+
+label {
+	font-family: 'Work Sans', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 14px;
+	color: #7C7C7C;
+}
+
+
+
+/*** Name and surename validation messages ***/
+.name_input, .lastname_input {
+	position: relative;
+}
+
+.name_validation {
+	position: absolute;
+    display: none;
+    top: 47px;
+    height: 10px;
+    color: red; 
+    font-size: 11px; 
+    padding: 2px; 
+}
+
+
+.lastname_validation {
+	position: absolute; 
+    display: none;
+    top: 47px;
+    height: 10px;
+    color: red; 
+    font-size: 11px; 
+    padding: 2px; 
+}
+
+/*** End of name and surename validation messages ***/
+
+
+
+
+
+
+/*** Nationality select ***/
+.nationality_select {
+	position: relative;
+}
+
+label.nationality {
+	position: relative;
+	
+}
+
+
+
+/*select arrow*/
+label.nationality::before {
+	position: absolute;
+	bottom: -16px;
+	right: -167px; 
+    content: ""; 
+    display: block;
+    width: 7px;
+    height: 1px;
+    background-color: #000000;;
+	-webkit-transform: rotate(50deg);
+    transform: rotate(50deg);    
+    pointer-events: none; 	
+}
+
+
+label.nationality::after {
+	position: absolute;
+	bottom: -16px;
+	right: -171px; 
+    content: ""; 
+    display: block;
+    width: 7px;
+    height: 1px;
+    background-color: #000000;
+	-webkit-transform: rotate(-50deg);
+    transform: rotate(-50deg);  
+    pointer-events: none;   
+}
+
+
+
+/*Validate message on empty nationality select value*/
+.nationality_validation {
+	display: none;
+	position: absolute;
+   	top: 47px;
+    height: 10px;
+    color: red; 
+    font-size: 11px; 
+    padding: 2px;  
+}
+/***End of nationality select ***/
+
+
+
+
+
+
+
+
+
+/*** Email validation messages and marks ***/
+.email_input {
+	position: relative;
+}
+
+
+.email_validation {
+	display: none;
+	position: absolute;
+	top: 47px;
+	height: 10px;
+    color: red; 
+    font-size: 11px; 
+    padding: 2px; 
+}
+
+
+
+.invalid_red_border {
+	color: #FF2222;
+	border-bottom: 2px solid #FF2222;
+	
+}
+
+
+/** "ок mark" if email entered is correct **/
+.email-ok_mark::before {
+	position: absolute;
+	top: 51%;
+	right: 10.7px; 
+    content: ""; 
+    display: block;
+    width: 8px;
+    height: 1.5px;
+    background-color: #5A61ED;
+	-webkit-transform: rotate(50deg);
+    transform: rotate(50deg);    
+}
+
+
+.email-ok_mark::after {
+	position: absolute;
+	top: 46.3%;
+	right: 0px; 
+    content: ""; 
+    display: block;
+    width: 16px;
+    height: 1.5px;
+    background-color: #5A61ED;
+	-webkit-transform: rotate(-50deg);
+    transform: rotate(-50deg);    
+}
+/** End of "ок mark" **/
+
+
+/*** End of Email validation messages and marks ***/
+
+
+
+
+
+
+
+/*** Date select ***/
+
+/*day select*/
+
+.date_select {
+	position: relative;
+}
+
+.birth-date {
+	display: flex;
+	
+}
+
+select.date:not(:last-child) {
+	margin-right: 9px;
+}
+
+select[name=day] {
+	width: 45px;
+}
+
+label.day {
+	position: relative;
+	left: 45px;
+}
+
+
+/*Custom select arrow*/
+label.day::before {
+	position: absolute;
+	top: 50%;
+	right: 4px; 
+    content: ""; 
+    display: block;
+    width: 7px;
+    height: 1px;
+    background-color: #000000;;
+	-webkit-transform: rotate(50deg);
+    transform: rotate(50deg);    
+    pointer-events: none; 	
+}
+
+
+label.day::after {
+	position: absolute;
+	top: 50%;
+	right: 0px; 
+    content: ""; 
+    display: block;
+    width: 7px;
+    height: 1px;
+    background-color: #000000;
+	-webkit-transform: rotate(-50deg);
+    transform: rotate(-50deg);  
+    pointer-events: none;   
+}
+
+
+
+
+/*Validate message on empty date fields values*/
+.date_validation {
+	position: absolute;
+    display: none;
+    top: 47px;
+    height: 10px;
+    color: red; 
+    font-size: 11px; 
+    padding: 2px; 
+	
+}
+/*End of day select*/
+
+
+
+
+/*Month select*/
+select[name=month] {
+	width: 94px;
+}
+
+label.month {
+	position: relative;
+	left: 94px;
+}
+
+
+/*custom select arrow*/
+label.month::before {
+	position: absolute;
+	top: 50%;
+	right: 4px; 
+    content: ""; 
+    display: block;
+    width: 7px;
+    height: 1px;
+    background-color: #000000;;
+	-webkit-transform: rotate(50deg);
+    transform: rotate(50deg);
+    pointer-events: none;    
+}
+
+
+label.month::after {
+	position: absolute;
+	top: 50%;
+	right: 0px; 
+    content: ""; 
+    display: block;
+    width: 7px;
+    height: 1px;
+    background-color: #000000;
+	-webkit-transform: rotate(-50deg);
+    transform: rotate(-50deg); 
+    pointer-events: none;  
+}
+/*End of month select*/
+
+
+
+
+/*Year select */
+select[name=year] {
+	width: 67px;
+}
+
+
+label.year {
+	position: relative;
+	left: 67px;
+}
+
+
+/*custom select arrow*/
+label.year::before {
+	position: absolute;
+	top: 50%;
+	right: 4px; 
+    content: ""; 
+    display: block;
+    width: 7px;
+    height: 1px;
+    background-color: #000000;;
+	-webkit-transform: rotate(50deg);
+    transform: rotate(50deg);
+    pointer-events: none;    
+}
+
+
+label.year::after {
+	position: absolute;
+	top: 50%;
+	right: 0px; 
+    content: ""; 
+    display: block;
+    width: 7px;
+    height: 1px;
+    background-color: #000000;
+	-webkit-transform: rotate(-50deg);
+    transform: rotate(-50deg); 
+    pointer-events: none;  
+}
+/*End of year */
+
+
+/*** End of Date select ***/
+
+
+
+
+
+
+/*** Gender radio buttons***/
+.radio_buttons {
+	display: flex;
+	align-items: center;
+	margin-bottom: 16px;   /*убрали margin-botton 16px из input[type=radio] и добавили контейнеру, чтобы радиокнопки не съехали */
+}
+
+.male_button {
+	margin-right: 19px; /*margin between  "radio buttons" blocks*/
+}
+
+
+.male_radio {
+	opacity: 1;
+}
+
+
+.male_button,.female_button {
+	display: flex;
+	align-items: center;
+	
+}
+
+input[type=radio] {
+	width: 12px;
+	margin-right: 6px;
+	margin-bottom: 0px; 
+	visibility: hidden; 	
+}
+
+.radio_title {
+	font-family: 'Work Sans', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	color: #111111;
+	position: relative;
+	bottom: 10px;
+}
+
+
+
+.radio_title::before {
+	position: absolute;
+	display: inline-block;
+	content: "";
+	left: -17px;
+	top: 1px;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #5A61ED;
+	border-radius: 50%;
+
+}
+
+
+.radio_title::after {
+	position: absolute;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	display: block;
+	content: "";
+	left: -13px;
+	top: 50%;
+	width: 6px;
+	height: 6px;
+	opacity: 0;
+	background-color: #5A61ED;;
+	border-radius: 50%;
+	transition: .2s;
+}
+
+input[type=radio]:checked + .radio_title::after {
+	opacity: 1;
+}
+/*** End of Gender radio buttons***/
+
+
+
+
+
+
+/* Password validation messages*/
+.password_input {
+	position: relative;
+}
+
+.confirm_password_input {
+	position: relative;
+}
+
+.confirm_password_validation {
+	position: absolute;
+    display: none;
+    top: 47px;
+    height: 10px;
+    color: red; 
+    font-size: 11px; 
+    padding: 2px;  
+}
+
+
+.password_validation {
+	  position: absolute;
+      display: none;
+      top: 47px;
+      height: 10px;
+      color: red;  
+      font-size: 11px; 
+      padding: 2px; 
+	
+}
+/* End of password validation messages */
+
+
+
+
+
+
+
+/*** form bottom  ***/
+.form-content-bottom  {
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+
+}
+
+.login_question,.login_link {
+	font-family: 'Work Sans', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 15px;
+	
+}
+
+
+.login_question {
+	color: #000000;
+}
+
+
+
+.login_link {
+
+	color: #5A61ED;
+}
+
+
+
+.submit_button {
+	background: #5A61ED;
+	padding: 7px 25px;
+	border: 0.5px solid #FFFFFF;
+	font-family: 'PT Sans', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	color: #FFFFFF;
+	cursor: pointer;
+	outline: none;
+}
+
+
+/***End of form bottom  ***/
+
+
+
+.form_content_succesfull_registration {
+	display: none;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	margin-left: 63px;
+	
+}
+
+
+.succesfull_registration_thank_you {
+	font-family: 'Work Sans', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 26px;
+	letter-spacing: -0.46px;
+	color: #111111;
+	margin-bottom: 11px;
+}
+
+.succesfull_registration_registered {
+	font-family: Work Sans;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 16px;
+	color: #111111;
+}
+
+
