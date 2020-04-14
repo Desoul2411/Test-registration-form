@@ -311,6 +311,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 			return true
 		} else {
+			submitButton.classList.add('animated','shake','fast');	/*animate submitButton*/
+			submitButton.addEventListener('animationend' , () => {
+				submitButton.classList.remove('animated','shake','fast');	
+			});
 			return false
 		}
 	};
